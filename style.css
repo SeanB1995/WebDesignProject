@@ -1,7 +1,10 @@
-html, body {
-	height: 100%;
+html, body 
+{
+	height:100%;
 }
-body{
+body
+{
+	font-family: 'Open Sans', sans-serif;
 	margin-top:50px;
 }
 .jumbotron
@@ -17,7 +20,8 @@ body{
 	z-index: 0;
 }
 
-.jumbotron video {
+.jumbotron video 
+{
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -25,22 +29,31 @@ body{
 	left: 0;
 	object-fit: fill;
 	z-index: -1;
-	-webkit-filter: brightness(50%);
+	display:none;
 }
 
 
 .jumbotron .container .wrapper 
 {
-	margin-top:300px;
-	text-align:left;
+	text-align:center;
 }
 
 .jumbotron h1
 {
 	text-align:center;
-	color:white;
+	color:rgb(255,255,255);
 }
 
+.jumbotron .btn
+{
+	background-image:none;
+	box-shadow:none;
+	outline:none;
+	border:1px solid rgb(255,255,255);
+	background-color:transparent;
+	display:inline-block;
+	margin-top:20px;
+}
 .navbar
 {
 	border:none;
@@ -52,12 +65,41 @@ body{
 }
 .navbar-inverse .navbar-brand 
 {
-    color:rgb(195, 66, 163);
+    color:rgb(195,66,163);
 }
 
-.navbar-brand
+.navbar-brand>img {
+   max-height: 100%;
+   height: 100%;
+   width: auto;
+   margin: 0 auto;
+}
+
+.navbar .container
 {
-	 background: #055 url("BButterfly.png") center center;
+	position:relative;
+}
+
+.logo
+{
+	height:50px;
+	width:120px;
+	background: url("BButterfly.png") center center;
+	position:absolute;
+	top:0;
+	left:20px;
+	background-size:cover;
+}
+
+.navbar-inverse .navbar-nav>li>a 
+{
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover 
+{
+
+    background-color:rgb(225, 71, 187);
 }
 
 .footer
@@ -78,18 +120,20 @@ body{
 	background-color:rgb(225, 71, 187);
 	padding:40px 0;
 	color:rgb(255,255,255);
+	text-align: center;
 }
 
 .stats h2
 {
 	font-size:40px;
 }
+
 .stuff
 {
-	background-color:rgb(125, 111, 117);
+	background-color:rgb(255,255,255);
 	padding:40px 0;
 	text-align:center;
-	color:rgb(255,255,255);
+	color:rgb(000,000,000);
 }
 
 .stuff h3
@@ -100,7 +144,7 @@ body{
 {
 	background-color:rgb(37,37,37);
 	padding:40px 0;
-	color:white;
+	color:rgb(255,255,255);
 }
 
 .footersurround .copyright
@@ -110,18 +154,23 @@ body{
 
 .caro
 {
-	background-color:rgb(225,225,225);
+	background-color:rgb(255,255,255);
 	padding:40px 0;
 }
 
 .caro h4
 {
-	font-size:31px;
+	font-size:16px;
+}
+
+.caro p
+{
+	font-size:12px;
 }
 
 .storymap
 {
-	background-color:rgb(170,76,154);
+	background-color:rgb(225, 71, 187);
 	padding:20px 0;
 	color:rgb(255,255,255)
 }
@@ -144,15 +193,47 @@ body{
 
 .gallery
 {
-	background-color:rgb(30,226,234);
+	background-color:rgb(225,225,225);
 	padding:40px 0;
 	color:rgb(255,255,255)
+}
+
+.thumbnail
+{
+	position:relative;
+	overflow:hidden;
+}
+
+.thumbnail .overlay
+{
+	position:absolute;
+	height:100%;
+	width:100%;
+	left:0;
+	top:-100%;
+	transition:top 0.5s ease;
+	background-color:rgba(0,0,0, 0.7);
+	padding:30px;
+	color:white;
+	text-align:center;
+	font-size:25px;
+}
+
+.thumbnail:hover .overlay
+{
+	top:0px;
 }
 
 .gallery h3
 {
 	font-size:40px;
 	text-align:center;
+	color:rgb(0,0,0);
+}
+
+.gallery h4
+{
+	font-size:30px;
 }
 
 .title
@@ -162,7 +243,7 @@ body{
 
 .services
 {
-	background-color:rgb(130,126,34);
+	background-color:rgb(225,71,187);
 	height: auto;
 	padding: 50px;
 	color:rgb(255,255,255);
@@ -176,7 +257,7 @@ body{
 .jumbotron2
 {	 
 	position:relative;
-    background: #055 url("champagne.jpg") center center;
+    background: #055 url("towels-569139_1280.jpg") center center;
 	background-attachment:fixed;
     width: 100%;
     height: 40%;
@@ -185,9 +266,11 @@ body{
     margin-bottom: 0;
 }
 
-.jumbotron2 h1
+.jumbotron2 h1 
 {
-	font-size:80px;
+	font-size:30px;
+	color:rgb(0,0,0);
+	text-align:center;
 }
 .jumbotron2 .container .wrapper 
 {
@@ -197,9 +280,10 @@ body{
 
 .appointment
 {
-	background-color:rgb(230,126,34);
+	background-color:rgb(225,71,187);
 	height: auto;
 	padding: 50px;
+	color:rgb(255,255,255);
 }
 
 .icon-container 
@@ -211,18 +295,23 @@ body{
 	display:block;
 	margin: 0 auto;
 	text-align: center;
-
 }
+
+.contactus
+{
+	text-align: center;
+}
+
 .icon-container .glyphicon
 {
 	font-size:30px;
-	color:rgb(155, 89, 182);
+	color:rgb(155,89,182);
 	line-height: 100px;
 }
 
 .whatdo
 {
-	background-color: rgb(255,255,255);
+	background-color:rgb(255,255,255);
 	padding:40px 0;
 }
 
@@ -230,13 +319,15 @@ body{
 {
 	font-size:30px;
 	text-align:center;
-	color:rgb(225,225,225);
+	color:rgb(0,0,0);
 }
 
-.thumb {
-    margin-bottom: 30px;
+.thumb 
+{
+    margin-bottom:30px;
 }
-.carousel-content {
+.carousel-content 
+{
     color:black;
     display:flex;
     align-items:center;
@@ -245,17 +336,23 @@ body{
 .storymap .message
 {
 	font-family: 'handlee', serif;
-        font-size: 18px;
+    font-size: 18px;
 }
 
 .storymap h3
 {
 	font-family: 'handlee', serif;
-        font-size: 28px;
+    font-size:28px;
 }
 
-.services [class^="col-"] {
-	min-height: 250px;
+.services .col-md-3
+{
+	min-height:250px;
+}
+
+.services .col-sm-6
+{
+	min-height:250px;
 }
 
 #carousel-example .row
@@ -264,10 +361,8 @@ body{
 	margin-right:0;
 }
 
-#searchinput {
-    width: 250px;
-}
-#searchclear {
+#searchclear 
+{
     position: absolute;
     right: 5px;
     top: 0;
@@ -297,19 +392,6 @@ body{
 	float:left;
 }
 
-
-.navbar-brand>img {
-   max-height: 100%;
-   height: 100%;
-   width: auto;
-   margin: 0 auto;
-}
-
-.stats
-{
-	text-align: center;
-}
-
 .storymap
 {
 	text-align: center;
@@ -325,7 +407,24 @@ body{
 	margin-bottom:15px;
 }
 
-body
+.stats .icon-container .glyphicon 
 {
-	font-family: 'Open Sans', sans-serif;
+	color:rgb(225, 71, 187);
 }
+
+.stuff .icon-container .glyphicon
+{
+	color:rgb(225, 71, 187);
+}
+
+.services .icon-container .glyphicon
+{
+	color:rgb(225, 71, 187);
+}
+
+.appointment .icon-container .glyphicon
+{
+	color:rgb(225, 71, 187);
+}
+
+
